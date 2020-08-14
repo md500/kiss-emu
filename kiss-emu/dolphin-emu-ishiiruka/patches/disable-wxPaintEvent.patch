@@ -1,0 +1,15 @@
+diff --git a/Source/Core/DolphinWX/FifoPlayerDlg.cpp b/Source/Core/DolphinWX/FifoPlayerDlg.cpp
+index bf1a904..ebe0cf6 100644
+--- a/Source/Core/DolphinWX/FifoPlayerDlg.cpp
++++ b/Source/Core/DolphinWX/FifoPlayerDlg.cpp
+@@ -970,8 +970,8 @@ void FifoPlayerDlg::FileLoaded()
+ 
+   if (m_EvtHandler)
+   {
+-    wxPaintEvent event;
+-    m_EvtHandler->AddPendingEvent(event);
++    // wxPaintEvent event;
++    // m_EvtHandler->AddPendingEvent(event);
+   }
+ }
+ 

@@ -1,0 +1,6 @@
+cmake make
+xorg-server xinit xf86-input-libinput
+liberation-fonts
+gtk+2
+glu
+wxwidgets-gtk+2

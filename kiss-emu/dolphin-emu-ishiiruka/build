@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ..
+
+make
+make DESTDIR="$1" install
