@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+mkdir gtk2-build
+cd gtk2-build
+
+#cmake -DCMAKE_INSTALL_PREFIX="/usr" ..
+../configure --with-opengl --disable-xlocale --with-gtk=2 --prefix=/usr
+
+make
+make DESTDIR="$1" install

@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+mkdir gtk3-build
+cd gtk3-build
+
+#cmake -DCMAKE_INSTALL_PREFIX="/usr" ..
+../configure --with-opengl --disable-xlocale --with-gtk=3 --prefix=/usr
+
+make
+make DESTDIR="$1" install
