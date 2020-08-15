@@ -1,5 +1,9 @@
 #!/bin/sh -e
 
+tar xf edf489332a36c4e55e768aa58c23372c2b051dc5
+cp disable-wxPaintEvent.patch Ishiiruka-edf489332a36c4e55e768aa58c23372c2b051dc5/.
+cd Ishiiruka-edf489332a36c4e55e768aa58c23372c2b051dc5
+
 for patch in *.patch; do
     patch -p1 < "$patch"
 done
