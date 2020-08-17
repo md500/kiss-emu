@@ -1,0 +1,7 @@
+make
+pkgconf
+alsa-lib
+alsa-utils
+sdl2
+libsndfile
+zlib
