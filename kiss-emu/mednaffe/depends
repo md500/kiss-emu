@@ -1,0 +1,7 @@
+make
+pkgconf
+xorg-server xinit xf86-input-libinput
+liberation-fonts
+gtk+3
+glib
+mednafen

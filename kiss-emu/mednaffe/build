@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+tar xf 8cc6e65aca08f0c6c94444594f6289d8a3702e1e
+cd mednaffe-8cc6e65aca08f0c6c94444594f6289d8a3702e1e
+
+./configure --prefix=/usr
+
+make
+make DESTDIR="$1" install
