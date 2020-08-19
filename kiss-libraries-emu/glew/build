@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+tar zxf download
+
+cmake -DCMAKE_INSTALL_PREFIX="/usr" glew-2.2.0/build/cmake
+
+make
+make DESTDIR="$1" install

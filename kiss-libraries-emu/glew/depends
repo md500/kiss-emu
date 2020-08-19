@@ -1,0 +1,7 @@
+cmake make
+glu
+mesa
+libX11
+libXext
+libXi
+libXmu

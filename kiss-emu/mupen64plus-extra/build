@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+tar xf 49d5594bd2b3f7940a40d5285369204dcece64f8
+tar xf a961c711bfca2568a70591e69951f9af05564a00
+
+make -C mupen64plus-video-z64-49d5594bd2b3f7940a40d5285369204dcece64f8/projects/unix PREFIX=/usr all
+make -C mupen64plus-video-z64-49d5594bd2b3f7940a40d5285369204dcece64f8/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-rsp-cxd4-a961c711bfca2568a70591e69951f9af05564a00/projects/unix PREFIX=/usr all
+make -C mupen64plus-rsp-cxd4-a961c711bfca2568a70591e69951f9af05564a00/projects/unix PREFIX=/usr DESTDIR="$1" install
