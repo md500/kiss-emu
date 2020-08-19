@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+tar xf b2fd3a5e04568e29fb71e380ebb8e2db764b0225
+
+for patch in *.patch; do
+    patch -p1 < "$patch"
+done
+
+make -C mupen64plus-core-b2fd3a5e04568e29fb71e380ebb8e2db764b0225/projects/unix PREFIX=/usr all
+make -C mupen64plus-core-b2fd3a5e04568e29fb71e380ebb8e2db764b0225/projects/unix PREFIX=/usr DESTDIR="$1" install

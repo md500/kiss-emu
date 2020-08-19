@@ -1,0 +1,9 @@
+make
+xorg-server xinit xf86-input-libinput
+liberation-fonts
+libpng
+freetype-harfbuzz
+zlib
+sdl2
+nasm
+mupen64plus-headers

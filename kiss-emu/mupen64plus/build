@@ -1,0 +1,26 @@
+#!/bin/sh -e
+
+tar xf 55f330e6fb903ccb9ccc6f0ffbb37bbe29eef77f
+tar xf 7b1a2094a0ed3b32e84a0e738e468a5979b8d063
+tar xf 8548eb39f1526da2c5b224a81df12c7501a2dbad
+tar xf c8d337aada3a808a6d754bce134d4217b86b69dc
+tar xf d48c74a21737c6c20658f99fc73a86dde23842e1
+tar xf fc47e09f4e0f29b0fce69c477f5cebf79c0bae81
+
+make -C mupen64plus-audio-sdl-d48c74a21737c6c20658f99fc73a86dde23842e1/projects/unix PREFIX=/usr all
+make -C mupen64plus-audio-sdl-d48c74a21737c6c20658f99fc73a86dde23842e1/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-input-sdl-c8d337aada3a808a6d754bce134d4217b86b69dc/projects/unix PREFIX=/usr all
+make -C mupen64plus-input-sdl-c8d337aada3a808a6d754bce134d4217b86b69dc/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-rsp-hle-7b1a2094a0ed3b32e84a0e738e468a5979b8d063/projects/unix PREFIX=/usr all
+make -C mupen64plus-rsp-hle-7b1a2094a0ed3b32e84a0e738e468a5979b8d063/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-video-glide64mk2-55f330e6fb903ccb9ccc6f0ffbb37bbe29eef77f/projects/unix PREFIX=/usr all
+make -C mupen64plus-video-glide64mk2-55f330e6fb903ccb9ccc6f0ffbb37bbe29eef77f/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-video-rice-fc47e09f4e0f29b0fce69c477f5cebf79c0bae81/projects/unix PREFIX=/usr all
+make -C mupen64plus-video-rice-fc47e09f4e0f29b0fce69c477f5cebf79c0bae81/projects/unix PREFIX=/usr DESTDIR="$1" install
+
+make -C mupen64plus-ui-console-8548eb39f1526da2c5b224a81df12c7501a2dbad/projects/unix PREFIX=/usr PIE=1 all
+make -C mupen64plus-ui-console-8548eb39f1526da2c5b224a81df12c7501a2dbad/projects/unix PREFIX=/usr DESTDIR="$1" install
