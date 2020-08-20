@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+tar xf 08ef3522100e02a79747383640ac76a635ee4b85
+cd mupen64plus-qt-08ef3522100e02a79747383640ac76a635ee4b85
+
+mkdir build
+cd build
+
+qmake ../mupen64plus-qt.pro
+make
+
+mkdir -p $1/usr/bin
+cp mupen64plus-qt $1/usr/bin
